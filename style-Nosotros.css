@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+padding: 0;
+margin: 0;
+    }
+
+    :root {
+    --color-gris: #b4bbb4;  
+    --color-blanco-susio: #ebe5e5;     /* Blanco (fondos y texto sobre verde/rojo) */
+    
+    --color-verde: #3DA536;      /* Verde principal (logo y textos grandes) */
+    --color-rojo: #E32119;       /* Rojo (títulos y fondo de nombre) */
+    --color-blanco: #FFFFFF;     /* Blanco (fondos y texto sobre verde/rojo) */
+    --color-negro: #1C1C1C;      /* Negro (texto "Cultivando contigo!") */
+    --color-verde-oscuro: #2f6d1cee; /* Verde más oscuro (degradados y fondo inferior) */
+    --color-verde-negro: #1a3312ee; 
+
+    }
+    
+    
+    
+    body {
+        margin: 0;padding: 0;
+        background-color: var(--color-blanco-susio);
+    color: var(--negro-solido);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+        min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+    img{
+        width: 100%;
+    }
+.logo{
+width: 50px;
+border-radius: 50%;
+position: absolute;
+top: 5px;
+left: 10px;
+}
+
+
+
+.navbar {
+    background: var(--color-verde-oscuro);
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    gap: 10px;
+    box-shadow: inset 0 0 30px var(--color-negro);
+    align-items: center;
+min-height: 60px;
+z-index: 100;
+
+}
+
+
+
+.navbar a{
+    text-decoration: none;
+color: var(--color-blanco);
+margin-right:30px;
+}
+    .link-nav{
+        padding: 5px;
+    }
+
+
+        .logo-link{
+            text-decoration: none;
+            color: #FFFFFF;
+            border-bottom: 1px solid transparent; /* This is crucial for a smooth transition */
+            transition: border-bottom 0.2s ease-in-out,  width 0.5s;
+            }
+
+        .logo-link:hover {
+                text-align: center;
+            border-bottom: 1px solid var(--color-blanco, #FFFFFF);
+            width: 50%;
+            }
+
+
+
+/* Hover para escritorio */
+.logo:hover {
+  transform: scale(1.2) translateY(-10px); /* Brinquito hacia arriba */
+}
+
+/* Active para móviles (cuando tocan la imagen) */
+.logo:active {
+  transform: scale(1.2) translateY(-10px); /* Mismo efecto que hover */
+}
+
+/* Alternativa con rebote más natural usando keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-20px); }
+    50%  { transform: translateY(5px); }
+    70%  { transform: translateY(-10px); }
+    }
+
+n
+/* Aplicando animación en hover/active */
+.logo:hover,
+.logo:active {
+animation: bounce 0.5s ease;
+}
+
+.fa-house{
+    top: 15px;
+    font-size: 30px;
+    position: absolute;
+    color: var(--color-blanco);
+}
+
+/*MEDIA QUIERI*/
+
+
+
+     /* Aquí iría el contenido de tu sección Nosotros */
+
+.nosotros{
+margin: 100px 20px 0 20px;
+/* top | right | bottom | left */
+
+}
+
+.nosotros{
+    flex: 1;
+}
+
+footer{
+    width: 100%;
+        background-color: #6e8867;
+        text-align: center;
+        padding: 20px;
+        color: var(--color-blanco);
+        position: relative;
+        bottom: 0;
+}
+
+
+footer p{
+    font-size: 18px;
+}
+
+
+
+footer .fab:hover{
+border-bottom: 1px solid var(--color-blanco);
+
+}
